@@ -4,3 +4,4 @@ az vmss list-instance-connection-info `
   --name $VMName
 
 az vm list-skus --location francecentral --size Standard_B --all --output table
+az vm list-skus --location francecentral --size Standard_B --output table

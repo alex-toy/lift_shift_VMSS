@@ -1,6 +1,8 @@
-Exercise: Lift and Shift Migration with Virtual Machine Scale Sets (VMSS)
+Lift and Shift Migration with Virtual Machine Scale Sets (VMSS)
 =
-Create a Virtual Machine Scale using Cloud-init to bootstrap a hello world app. As we learned, creating custom images is the recommended path to deploy applications in VM scale set in a production environment. However, the purpose of this exercise is to have a hands-on experience with all the services required to create a Virtual Machine scale set.
+Create a Virtual Machine Scale using Cloud-init to bootstrap a hello world app. Creating custom images is the recommended path to deploy applications in VM scale set in a production environment. However, the purpose of this project is to have a hands-on experience with all the services required to create a Virtual Machine scale set.
+
+In order to execute the bellow instructions, you only need to run **commands\Configs\config.ps1**. All the resources will automatically be deployed for you. At the end, the IP address will be printed at the command line. 
 
 1. Create a resource group with the following settings:
     - name: scaleset-xxx-rg (replace xxx with random numbers)

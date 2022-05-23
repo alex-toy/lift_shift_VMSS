@@ -20,12 +20,3 @@ $groups | Foreach-Object { az group delete -n $_.name --yes }
 # "Following resources will be deleted :"
 # $resources | Foreach-Object { $_.name }
 # $resources | Foreach-Object { az resource delete $_.name }
-
-
-
-
-
-
-
-
-

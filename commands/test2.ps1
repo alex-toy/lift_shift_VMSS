@@ -3,10 +3,27 @@ $names
 
 $InboundRuleName = "Port_80"
 
+az network lb inbound-nat-rule create  `
+    --resource-group $RGName `
+    --lb-name $VMSSLoadBalancer `
+    --name $InboundRuleName `
+    --protocol Tcp `
+    --frontend-port 81 `
+    --backend-port 81
+    # [--backend-pool-name]
+    # [--enable-tcp-reset {false, true}]
+    # [--floating-ip {false, true}]
+    # [--frontend-ip-name]
+    # [--frontend-port]
+    # [--frontend-port-range-end]
+    # [--frontend-port-range-start]
+    # [--idle-timeout]
+
+
 az network nic ip-config create `
     --resource-group $RGName `
     --name ipconfig1 `
-    --nic-name $names[0]
+    --nic-name
     # [--app-gateway-address-pools]
     # [--application-security-groups]
     # [--gateway-name]
@@ -23,7 +40,9 @@ az network nic ip-config create `
 
 az network nic ip-config inbound-nat-rule add `
     --resource-group $RGName `
-    --inbound-nat-rule $InboundRuleName `
     --nic-name $names[0] `
+    --name IPConfig1 `
+    --inbound-nat-rule $InboundRuleName `
     --lb-name $VMSSLoadBalancer `
     --ip-config-name ipconfig1
+    
